@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sport</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="wrapper" class="wrapper">
+    <div id="topbar" class="topbar ui-widget-header ui-corner-bottom">
+      <div id="topbar-menu" class="topbar-menu">
+        <%= link_to t(:hello), "http://www.google.fr" %>
+      </div>
+      <div id="topbar-search" class="topbar-search">
+       
+        <%= text_field_tag "global-search" %>
+ 
+      </div>
+    </div>
+    <div id="main" class="main ui-widget">
+      <div id="header" class="header ui-widget-content ui-corner-all">
+        <div id="logo" class="logo">logo</div>
+        <div id="banner" class="banner"> banner</div>
+        <div id="main-menu" class="main-menu ui-widget-content ui-corner-top"> main-menu</div>
+      </div>
+      <div id="content" class="content">
+        <div id="left-sidebar" class="left-sidebar ui-widget-content">
+          left side bar
+          <%= yield :leftsidebar %>
+        </div>
+        <div id="middle-content" class="middle-content ui-widget-content">
+          <%= yield %>
+        </div>
+        <div id="right-sidebar" class="right-sidebar ui-widget-content">
+          right side bar
+          <%= yield :rightsidebar %>
+        </div>
+        <div id="footer" class="footer ui-widget-header ui-corner-all"> footer</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

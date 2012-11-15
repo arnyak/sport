@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: sport_development
+  pool: 5
+  username: sport
+  password: sport
+
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  database: sport_test
+  pool: 5
+  username: sport
+  password: sport
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: 
+  pool: 5
+  username:
+  password:
+
+cucumber:
+  <<: *test
