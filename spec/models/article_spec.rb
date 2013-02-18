@@ -11,7 +11,7 @@ describe Article do
   end
 
   it "should be valid given valid attributes" do
-    article = Article.new(@valid_attibutes)
+    article = Article.new(@valid_attributes)
     article.should be_valid
   end
 
